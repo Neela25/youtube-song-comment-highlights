@@ -9,7 +9,7 @@ fp=open("Desktop/Youtube_Comments.txt","r")
 words=fp.read()
 
 #Opening the image which is to used as a wordcloud mask
-mask = np.array(Image.open('Desktop/v.jpg')) 
+mask = np.array(Image.open('Desktop/Images/input.jpg')) 
 
 #Generating the wordcloud by specifying all the needed parameters
 word_cloud = WordCloud(width=600,height=600,max_font_size=76,min_font_size=12,stopwords=STOPWORDS,mask=mask,colormap='Blues').generate(words)
